@@ -1,0 +1,68 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.site-header {
+  background-color: #125028;
+  --pico-color: #eeeeee;
+  --pico-primary: #eeeeee;
+  --pico-primary-hover: #c8d4e4;
+  --pico-primary-underline: transparent;
+  --pico-primary-hover-underline: transparent;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1rem;
+}
+
+.site-header .logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.site-header nav a {
+  margin-left: 1rem;
+}
+
+
+.site-footer {
+  font-size: 0.875rem;
+  background-color: #0c0c0c;
+  --pico-color: #444444;
+  --pico-primary: #444444;
+  --pico-primary-hover: #959595;
+  --pico-primary-underline: #444444;
+  --pico-primary-hover-underline: #959595;
+}
+
+.site-footer a {
+  background-color: #0c0c0c;
+}
+
+.site-footer nav {
+  gap: 1rem;
+}
+
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1rem;
+}
+
+.site-footer small {
+  font-size: inherit;
+  color: #444444;
+  margin-left: 1rem;
+  gap: 1rem;
+}

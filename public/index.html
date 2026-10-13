@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MeetMeet</title>
+  <link rel="stylesheet" href="/css/pico.jade.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/event_creation.css">
+  <link rel="stylesheet" href="/css/calendar.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container-fluid">
+    <input type="text" name="event_name" class="event-name-input" placeholder="New Event Name" aria-label="Event name" required>
+
+    <div class="split">
+      <section class="split-left">
+        <h2>Pick possible dates</h2>
+
+        <div class="calendar" id="calendar">
+          <div class="cal-nav">
+            <button type="button" id="cal-prev" class="outline secondary" aria-label="Previous month">&lsaquo;</button>
+            <strong id="cal-title" aria-live="polite"></strong>
+            <button type="button" id="cal-next" class="outline secondary" aria-label="Next month">&rsaquo;</button>
+          </div>
+
+          <div class="cal-weekdays" aria-hidden="true">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+          </div>
+
+          <div class="cal-days" id="cal-days" role="grid" aria-label="Choose dates"></div>
+
+          <div class="cal-footer">
+            <span id="cal-count">No dates selected</span>
+            <button type="button" id="cal-clear" class="outline secondary">Clear</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="split-right">
+        <h2>Event details</h2>
+        <p class="hint">Form TODO.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/include.js"></script>
+  <script src="/js/calendar.js"></script>
+</body>
+</html>

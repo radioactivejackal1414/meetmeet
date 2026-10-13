@@ -1,0 +1,21 @@
+input.event-name-input {
+  display: block;
+  width: calc(30ch + 2 * var(--pico-form-element-spacing-horizontal));
+  max-width: 100%;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+/* Two-column page that stacks on narrow screens */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .split { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.hint { color: var(--pico-muted-color); }

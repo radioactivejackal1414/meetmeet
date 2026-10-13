@@ -1,0 +1,67 @@
+.calendar { max-width: 420px; }
+
+.cal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+.cal-nav button {
+  width: 2.5rem;
+  margin: 0;
+  padding: 0.25rem 0;
+  line-height: 1;
+}
+.cal-nav button:disabled { opacity: 0.3; }
+
+.cal-weekdays,
+.cal-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+.cal-weekdays {
+  margin-bottom: 4px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--pico-muted-color);
+}
+
+/* touch-action stops the page scrolling while dragging on touch screens */
+.cal-days { touch-action: none; user-select: none; }
+
+.cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--pico-muted-border-color);
+  border-radius: var(--pico-border-radius);
+  cursor: pointer;
+}
+.cal-day:hover { border-color: var(--pico-primary); }
+.cal-day:focus-visible {
+  outline: 2px solid var(--pico-primary);
+  outline-offset: 1px;
+}
+.cal-day.today { font-weight: 700; border-color: var(--pico-primary); }
+.cal-day.selected {
+  background: var(--pico-primary-background);
+  border-color: var(--pico-primary-background);
+  color: var(--pico-primary-inverse);
+}
+.cal-day.disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  background: transparent;
+  border-color: transparent;
+}
+.cal-blank { visibility: hidden; }
+
+.cal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.cal-footer button { width: auto; margin: 0; padding: 0.35rem 0.9rem; }
